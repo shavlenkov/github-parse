@@ -23,13 +23,6 @@ class AllRepositories extends React.Component {
                         isLoaded: true,
                         items: result.items
                     });
-                },
-
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
                 }
             )
     }
