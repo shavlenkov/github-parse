@@ -42,7 +42,7 @@ class AllRepositories extends React.Component {
 
         let star = document.getElementById("star")
 
-        star.setAttribute("class", "fa-solid fa-star")
+        star.setAttribute("className", "fa-solid fa-star")
     }
 
     render() {
