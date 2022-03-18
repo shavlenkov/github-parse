@@ -114,10 +114,14 @@ class SavedRepositories extends React.Component {
                             <div  className="list-group-item list-group-item-action flex-column align-items-start">
                                 <div className="d-flex w-100 justify-content-between">
                                     <h5 className="mb-1"><a href={item.url} target="blank">{item.name}</a></h5>
-                                    <button onClick={() => this.deleteRepo(item.id)} className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
+                                    <button onClick={() => this.delete(item.id)} className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
                                 </div>
                                 <p className="mb-1">{item.desc}</p>
                                 <small><i className="fa-solid fa-star"></i> {item.stars}</small>
+                                &nbsp;&nbsp;
+                                <small><i className="fa-solid fa-eye"></i> {item.watchers_count}</small>
+                                &nbsp;&nbsp;
+                                <small><i className="fa-solid fa-code-fork"></i> {item.forks_count}</small>
                             </div>
                         ))
                     }
