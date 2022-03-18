@@ -48,9 +48,8 @@ class AllRepositories extends React.Component {
         localStorage.setItem(item.id, JSON.stringify(data))
     }
 
-
     render() {
-        const { error, isLoaded, items } = this.state;
+        const { isLoaded, items } = this.state;
 
         let loading = document.getElementById("loading");
 
@@ -119,9 +118,9 @@ class SavedRepositories extends React.Component {
                                 <p className="mb-1">{item.desc}</p>
                                 <small><i className="fa-solid fa-star"></i> {item.stars}</small>
                                 &nbsp;&nbsp;
-                                <small><i className="fa-solid fa-eye"></i> {item.watchers_count}</small>
+                                <small><i className="fa-solid fa-eye"></i> {item.watchers}</small>
                                 &nbsp;&nbsp;
-                                <small><i className="fa-solid fa-code-fork"></i> {item.forks_count}</small>
+                                <small><i className="fa-solid fa-code-fork"></i> {item.forks}</small>
                             </div>
                         ))
                     }
