@@ -40,9 +40,9 @@ class AllRepositories extends React.Component {
 
         localStorage.setItem(item.id, JSON.stringify(data))
 
-        let star = document.getElementById("star")
+        let star = document.getElementById("star" + item.id)
 
-        star.setAttribute("className", "fa-solid fa-star")
+        star.setAttribute("class", "fa-solid fa-star")
     }
 
     render() {
@@ -64,7 +64,7 @@ class AllRepositories extends React.Component {
                             <div className="d-flex w-100 justify-content-between">
                                 <h5 className="mb-1"><a href={item.html_url} target="blank">{item.name}</a></h5>
                                 <button onClick={ () => this.add(item) } class="btn btn-primary">
-                                    <i id="star" className={localStorage.getItem(item.id) != null ? 'fa-solid fa-star' : 'fa-regular fa-star'}></i>
+                                    <i id={"star" + item.id} className={localStorage.getItem(item.id) != null ? 'fa-solid fa-star' : 'fa-regular fa-star'}></i>
                                 </button>
                             </div>
                             <p className="mb-1">{item.description}</p>
