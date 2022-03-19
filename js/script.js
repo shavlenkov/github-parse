@@ -61,7 +61,7 @@ class AllRepositories extends React.Component {
                     items.map(item => (
                         <div  className="list-group-item list-group-item-action flex-column align-items-start">
                             <div className="d-flex w-100 justify-content-between">
-                                <h5 className="mb-1"><a href={item.html_url} target="blank">{item.name}</a></h5><span class="badge bg-secondary">{item.language}</span>
+                                <h5 className="mb-1"><a href={item.html_url} target="blank">{item.name}</a><span class="badge rounded-pill bg-secondary">{item.language}</span></h5>
                                 <button onClick={ () => this.add(item) } class="btn btn-primary">
                                     <i id={"star" + item.id} className={localStorage.getItem(item.id) != null ? 'fa-solid fa-star' : 'fa-regular fa-star'}></i>
                                 </button>
