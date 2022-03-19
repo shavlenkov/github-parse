@@ -154,7 +154,7 @@ class App extends React.Component {
             button = <button class="btn btn-danger" onClick={this.showAllRepositories}><i className="fa-solid fa-arrow-left"></i> Назад</button>;
             list = <SavedRepositories/>
         } else {
-            button = <button class="btn btn-primary" onClick={this.showSavedRepositories}><i className="fa-regular fa-bookmark"></i> Избранные</button>;
+            button = <button class="btn btn-primary" onClick={this.showSavedRepositories}><i className="fa-regular fa-bookmark"></i> Сохранённые</button>;
             list = <AllRepositories/>
         }
 
