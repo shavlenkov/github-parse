@@ -32,6 +32,7 @@ class AllRepositories extends React.Component {
             name: item.name,
             descr: item.description,
             url: item.html_url,
+            lang: item.language,
             stars: item.stargazers_count,
             watchers: item.watchers_count,
             forks: item.forks_count
@@ -100,7 +101,7 @@ class SavedRepositories extends React.Component {
         }
 
         if(savedRepositories.length == 0) {
-            return (<h3>Здесь пока-что нет сохраненных репозиториев</h3>);
+            return (<h3>Здесь пока-что нет сохранённых репозиториев</h3>);
         } else {
             return (
                 <div class="list-group">
@@ -108,7 +109,7 @@ class SavedRepositories extends React.Component {
                         savedRepositories.map(item => (
                             <div  className="list-group-item list-group-item-action flex-column align-items-start">
                                 <div className="d-flex w-100 justify-content-between">
-                                    <h5 className="mb-1"><a href={item.url} target="blank">{item.name}</a></h5>
+                                    <h5 className="mb-1"><a href={item.url} target="blank">{item.name}</a><sup><span class="badge rounded-pill bg-secondary">{item.lang}</span></sup></h5>
                                     <button onClick={() => this.delete(item.id)} className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
                                 </div>
                                 <p className="mb-1">{item.desc}</p>
