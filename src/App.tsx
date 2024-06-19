@@ -13,7 +13,8 @@ function App() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Main</Link>
+                            <Link to="/" style="margin-right: 20px">Main</Link>
+                          
                             <Link to="/favorites">Favorites</Link>
                         </li>
                     </ul>
